@@ -1,2 +1,2 @@
 # ecommerce
-A static website using HTML, CSS ,and Bootstrap.
+A static Ecommerce website using HTML, CSS ,and Bootstrap.
