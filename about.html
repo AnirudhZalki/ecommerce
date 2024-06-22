@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <title>Ecommerce</title>
+    <link rel="icon" type="image/icon" href="ecommercelogo.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .fa 
+        {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+        }
+        .fa-facebook, .fa-map-marker, .fa-phone, .fa-twitter, .fa-linkedin, .fa-instagram, .fa-clock-o
+        {
+            color: rgb(84, 199, 84);
+        }
+        .fa-shopping-cart 
+        {
+            color: white;
+        }
+        .fa-headphones,.fa-bell,.fa-bullhorn,.fa-download,.fa-search
+        {
+            color:blue;
+        }
+        .fa-arrow-right
+        {
+            color:white;
+        }
+        .fa-apple,.fa-users,.fa-check,.fa-heart
+        {
+            color:green;
+        }
+        .navbar-nav .nav-item 
+        {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-nav .nav-item .fa 
+        {
+            margin: 0 10px;
+        }
+        .navbar-text 
+        {
+            flex: 1;
+        }
+        .navbar-icons 
+        {
+            display: flex;
+            align-items: center;
+        }
+        .badge 
+        {
+            padding-left: 10px;
+            padding-right: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        .label-warning[href],
+        .badge-warning[href] 
+        {
+            background-color: #c67605;
+        }
+         #lblCartCount 
+        {
+            font-size: 14px;
+            background: #ff0000;
+            color: #fff;
+            padding: 0 5px;
+            vertical-align: top;
+            margin-left: -5px; 
+        }
+        .input-group 
+        {
+            margin-top: 10px;
+        }
+
+        .input-group-text 
+        {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-control 
+        {
+            height: 50px;
+            width: 150px;
+            padding-top: 5px;
+        }
+        .zoom
+        {
+            transition:transform .5s;
+            margin:0 auto;
+        }
+        .zoom:hover
+        {
+            -ms-transform:scale(1.3);
+            -webkit-transform:scale(1.5);
+            transform: scale(1.1);
+        }
+        .blink {
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+        .nav-item:hover .nav-link,
+        .nav-item:hover
+        {
+            background-color: #032750; 
+            color: white;
+        }
+
+        .nav-item .nav-link,
+        .nav-item .dropdown-item 
+        {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">   
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <div class="navbar-text text-white">
+                    <p><i class="fa fa-map-marker"></i>123 street, New York, USA 
+                    <i class="fa fa-clock-o"></i>Mon-Fri: 9.00am - 9.00pm</p>
+                </div>
+                <div class="navbar-icons">
+                    <div class="nav-item text-white bg-dark">
+                        <i class="fa fa-phone"></i> +91 7891387983
+                    </div>
+                    <div class="nav-item bg-dark">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <div class="nav-item bg-dark">
+                        <a href="https://x.com/?lang=en" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </div>
+                    <div class="nav-item bg-dark">
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </div>
+                    <div class="nav-item bg-dark">
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                    <div class="nav-item bg-dark">
+                        <a href="https://www.shopping.com" target="_blank"><i class="fa fa-shopping-cart"></i><span class='badge badge-warning' id='lblCartCount'> 5 </span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+               
+        <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <a class="navbar-brand fs-3" href="website_project.html">ECommerce <i class="fa fa-shopping-cart"></i></a>
+                    <li class="nav-item bg-success">
+                        <a href="website_project.html" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item bg-success">
+                        <a href="about.html" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item dropdown bg-success">
+                        <a href="website_project.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">CATEGORY</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mobile.html" class="dropdown-item">Mobiles</a></li>
+                            <li><a href="laptop.html" class="dropdown-item">Laptops</a></li>
+                            <li><a href="watch.html" class="dropdown-item">Watches</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown bg-success">
+                        <a href="website_project.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">MORE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item"><i class="fa fa-bell"></i>Notification Preferences</a></li>
+                            <li><a href="#" class="dropdown-item"><i class="fa fa-headphones"></i> 24x7 Customer Support</a></li>
+                            <li><a href="#" class="dropdown-item"><i class="fa fa-bullhorn"></i>Advertise</a></li>
+                            <li><a href="#" class="dropdown-item"><i class="fa fa-download"></i>Download App</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item bg-success">
+                        <a href="contact.html" class="nav-link">CONTACT</a>
+                    </li>
+                    <li class="nav-item ms-4 bg-success">
+                        <div class="input-group mb-3 text-center">
+                            <span class="input-group-text" id="basic-addon1" style="height:50px;width:150px;"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2" style="height:50px;width:150px;padding-top:5px;">
+                        </div>    
+                    </li>
+                    <div class="nav-item ms-4 bg-success">
+                        <button type="button" class="btn btn-primary btn-sm fs-4" data-bs-toggle="modal" data-bs-target="#loginModal">Login <i class="fa fa-arrow-right"></i></button>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </div>
+        
+    <div class="modal" id="loginModal">
+        <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header p-3">
+                        <h1 class="modal-title text-primary text-center">ECommerce Login</h1>
+                        <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body" style="background-image: url(ecommerce.png);">
+                        <form>
+                            <div class="mt-3 mb-3">
+                                <label class="text-white">Email</label>
+                                <input type="email" name="email" class="form-control" placeholder="Enter your email" style="width:80%;" required>
+                            </div>
+                            <div class="mt-3 mb-3">
+                                <label class="text-white">Password</label>
+                                <input type="password" name="password" class="form-control" style="width:80%;" required>
+                            </div>
+                            <div class="mt-3 mb-3">
+                                <input type="submit" name="submit" value="submit" class="btn btn-primary btn-lg" style="width:200px;">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger btn-lg" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="container bg-light mt-3 mb-3">
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="fs-4" style="text-align: justify;"><b>ECommerce</b> is the activity of electronically buying or selling products on online services or over the Internet. E-commerce draws on technologies such as mobile commerce, electronic funds transfer, supply chain management, Internet marketing, online transaction processing, electronic data interchange, inventory management systems, and automated data collection systems. E-commerce is the largest sector of the electronics industry and is in turn driven by the technological advances of the semiconductor industry.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="e-commerce.jpg" style="width:100%;height:100%;">
+            </div>
+        </div>
+    </div>
+        <div class="container-fluid" style="background-color:rgb(145, 226, 199);">
+            <div class="row">
+            <div class="col-lg-6" style="text-align: center;">
+                <p class="fs-4 text-center text-primary bg-light-success fw-bold">Get connected with us on social networks:
+            </div>
+            <div class="col-lg-6">
+            <ul class="fs-4">
+                <li class="fa fa-facebook text-primary"></li>
+                <li class="fa fa-twitter text-primary"></li>
+                <li class="fa fa-google text-primary"></li>
+                <li class="fa fa-instagram fw-bold text-primary"></li>
+                <li class="fa fa-linkedin text-primary"></li>
+                <li class="fa fa-envelope text-primary"></li>
+            </ul>
+            </div>
+            </p>
+            </div>
+        </div>
+    
+        <div class="container-fluid bg-dark text-white" style=" background-image: url(bg2.jpg); width: 100%;">
+            <div class="row">
+                <div class="d-flex flex-wrap justify-content-around fw-bold mt-3 mb-3">
+                    <div>
+                      <h5 class="mt-1 text-center">ECOMMERCE</h5>
+                      <p style="width: 150px; font-size:13px;" class="text-primary"><a href="website_project.html"><img src="ecommercelogo.jpeg" style="height:150px;width:150px;"></a></p>
+                    </div>
+        
+                    <div>
+                      <h5 class="mt-1 text-center">PRODUCTS</h5>
+                      <ul style="list-style: none;">
+                      <li class="mt-4 mb-4">MD Bootstrap</li>
+                      <li class="mt-4 mb-4">MD Wordpress</li>
+                      <li class="mt-4 mb-4">BrandFlow</li>
+                      <li class="mt-4 mb-4">Bootstrap Angular</li>
+                      </ul>
+                    </div>
+        
+                    <div>
+                      <h5 class="mt-1 text-center">USEFUL LINKS</h5>
+                      <ul style="list-style: none;">
+                      <li class="mt-4 mb-4">Your Account</li>
+                      <li class="mt-4 mb-4">Become an Affiliate</li>
+                      <li class="mt-4 mb-4">Shipping Rates</li>
+                      <li class="mt-4 mb-4">Help</li>
+                      </ul>
+                    </div>
+        
+                    <div>
+                      <h5 class="mt-1 text-center">CONTACT</h5>
+                      <ul style="list-style: none;">
+                      <li class="mt-1 mb-1"><i class="fa fa-home"></i>New York,NY 10012,US</li>
+                      <li class="mt-1 mb-1"><i class="fa fa-envelope"></i>info@example.com</li>
+                      <li class="mt-1 mb-1"><i class="fa fa-phone text-white"></i>+01 23456788</li>
+                      <li class="mt-1 mb-1"><i class="fa fa-fax"></i>+01 23456789</li> 
+                      </ul> 
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center footer" style="background-color:rgb(145, 226, 199);">
+            <p class="text-primary fw-bold">&copy copyrights reserved - 2024: E commerce online shopping cart | <span><a href="https://gititacademyhubli.in/" style="text-decoration:none; font-weight:bold;" class="text-dark" target="_blank">GIT IT ACADEMY HUBLI</a></span> </p>
+            <p class="text-dark fw-bold">Designed and Developed by: <span class="text-success fw-bold">Anirudh A Zalki</span></p>
+            <p class="text-secondary fw-bold"><span class="text-dark fw-bold">Guided By: </span>Miss Bhavani Naik</p>
+        </div>
+    
+</body>
+</html>
